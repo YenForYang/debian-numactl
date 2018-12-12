@@ -4,7 +4,7 @@ Version: 2.0.12-2
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Ian Wienand <ianw@debian.org>
-Installed-Size: 51
+Installed-Size: 47
 Depends: libnuma1 (= 2.0.12-2)
 Breaks: libnuma-dbg (<< 2.0.11-2.1~)
 Replaces: libnuma-dbg (<< 2.0.11-2.1~)
@@ -12,4 +12,4 @@ Section: debug
 Priority: optional
 Multi-Arch: same
 Description: debug symbols for libnuma1
-Build-Ids: 50c2cfaa0a0e302b6c50e0e80143214e4ad707cf
+Build-Ids: b18bddc6037ae7355b0cf8f83f2deba99202781a

@@ -1,8 +1,8 @@
-fde07682279b5ead705b94149521d769  usr/bin/memhog
-df7f7be5efb558c431f7acb7688e67f9  usr/bin/migratepages
-9ec29108c0b1a29a8e2e36f11fc8f73b  usr/bin/migspeed
-10eb8d1cbc9cd2079658577312d0120a  usr/bin/numactl
-ade433461e6892a2bdfff1273425160c  usr/bin/numastat
+edb8ec38b1036995984ef7e68195e1b9  usr/bin/memhog
+c82b01425ef23a60b76fe2aa871b3bcc  usr/bin/migratepages
+e3269ccf5f8cb4c097a3951fcd4d4349  usr/bin/migspeed
+00a8ae698a1ee0d5bd8a8754f1788560  usr/bin/numactl
+5973b4500f474b070cf7d7aaf0068d82  usr/bin/numastat
 68d49941a460ce28e349e9892953b333  usr/share/doc/numactl/README.Debian
 b15466c7481bb7d618a557fa0f8ce2b7  usr/share/doc/numactl/buildinfo_amd64.gz
 6d4812b2b0cce70ac51cedf8e303bdcd  usr/share/doc/numactl/changelog.Debian.gz

@@ -1,7 +1,7 @@
 417fb979374d579ac44299dbea96e8e6  usr/include/numa.h
 fafef432000026e169c414d7afa72aaf  usr/include/numacompat1.h
 17b220925eab4c5c3ce62a3fd9d83149  usr/include/numaif.h
-7abb9c922ee700adab3c6421ff70130d  usr/lib/x86_64-linux-gnu/libnuma.a
+ce38e1628de8f6133c7e5c20c3f1637e  usr/lib/x86_64-linux-gnu/libnuma.a
 b15466c7481bb7d618a557fa0f8ce2b7  usr/share/doc/libnuma-dev/buildinfo_amd64.gz
 6d4812b2b0cce70ac51cedf8e303bdcd  usr/share/doc/libnuma-dev/changelog.Debian.gz
 1fe113e4a892a0ae09bc7274eb4c5740  usr/share/doc/libnuma-dev/copyright

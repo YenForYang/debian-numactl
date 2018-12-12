@@ -3,8 +3,8 @@ Source: numactl
 Version: 2.0.12-2
 Architecture: amd64
 Maintainer: Ian Wienand <ianw@debian.org>
-Installed-Size: 183
-Depends: libc6 (>= 2.14)
+Installed-Size: 85
+Depends: libc6 (>= 2.8)
 Section: libs
 Priority: optional
 Multi-Arch: same

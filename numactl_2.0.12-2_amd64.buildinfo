@@ -4,26 +4,26 @@ Binary: numactl libnuma1 libnuma-dev
 Architecture: amd64
 Version: 2.0.12-2
 Checksums-Md5:
- 32d1b00bef8cbb47502473d738f9fad2 169200 libnuma-dev_2.0.12-2_amd64.deb
- 68143faa226a30eac472e28a41d77c8a 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
- 88c69586f5e35130e92cabf2d2cb80cd 46204 libnuma1_2.0.12-2_amd64.deb
- b9be1fabb2ecf952dff3257441685ff7 48120 numactl-dbgsym_2.0.12-2_amd64.deb
- f11b3e040aee52dad2bad2a29c04413b 62132 numactl_2.0.12-2_amd64.deb
+ d94399b88910b8f554754f35c112686b 168772 libnuma-dev_2.0.12-2_amd64.deb
+ d43e0e6528b38370dbba6c1c1952263a 26004 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ ca3286c45f2481f58ad679757dfb51e3 28908 libnuma1_2.0.12-2_amd64.deb
+ 4e2efb1dc0b7e031c78216b4ed33c87c 45332 numactl-dbgsym_2.0.12-2_amd64.deb
+ c7daf17864786058ce3e855013d70e8b 36384 numactl_2.0.12-2_amd64.deb
 Checksums-Sha1:
- 594d32224c01a21b02d3f748ae12548a16543844 169200 libnuma-dev_2.0.12-2_amd64.deb
- 8515ad4d4faca76cceb5bfac942206b4dac3e308 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
- d71b909568bef64886d184f3590b179f1dd23b92 46204 libnuma1_2.0.12-2_amd64.deb
- 9c7d01cf35beb393544a3652ed63d64372cca955 48120 numactl-dbgsym_2.0.12-2_amd64.deb
- 64fe08f515fed0f4e93d101205ad0b50b1fca7c1 62132 numactl_2.0.12-2_amd64.deb
+ 2b1e8ce3cc7efce55b4b56180db096cfd3d3b510 168772 libnuma-dev_2.0.12-2_amd64.deb
+ 2e79904ee13b55a91814a516ffcace6108ed2031 26004 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ 9ed421cc120014eb196a7524426439cc77faab36 28908 libnuma1_2.0.12-2_amd64.deb
+ 89bcce641868f6c5569ee1926f91229d8c71871c 45332 numactl-dbgsym_2.0.12-2_amd64.deb
+ b459c123407502e286364be2c1807fd32498d9d6 36384 numactl_2.0.12-2_amd64.deb
 Checksums-Sha256:
- 1a4387f9f50b052427ae755b0b9be15b0f7fb3d4664a759bb83a11a8ece9d380 169200 libnuma-dev_2.0.12-2_amd64.deb
- d247c4542f06cffa67f4f582f51ab8f5019fb59f3c613c92adde595637de19ec 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
- e25a4890b5794f1a1b6beed1ccb065eccdad0d9598501e07251f1d931d9b8bfe 46204 libnuma1_2.0.12-2_amd64.deb
- 54674d8887b2e1f044aca575648293809d61d2ad50d1d046662b307076f69e76 48120 numactl-dbgsym_2.0.12-2_amd64.deb
- 00309059954146b45aacee3fa9fee38dc5766a388374e82b9019f2c588d8f01f 62132 numactl_2.0.12-2_amd64.deb
+ 9f879fda7045f6fe19d6c1379cc362535e866cdc9e56d0fdd25ab716572cb3ba 168772 libnuma-dev_2.0.12-2_amd64.deb
+ 13fc7e53fee77ed53c26b2e0e3c084efa53a7357dcf4366af22b49e98a8d9efa 26004 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ 660c58de21419f27282b130405d90eb0c2cea01ed213af8671ab4c902896262b 28908 libnuma1_2.0.12-2_amd64.deb
+ cd16536ac8a8acacaca1be401ff50f8601e262354abad3259844047e5a405e30 45332 numactl-dbgsym_2.0.12-2_amd64.deb
+ 26ff375afe989c5fc80de36a92c6d2b2fc4af176165c3b7935fd318dcc467955 36384 numactl_2.0.12-2_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Wed, 12 Dec 2018 08:08:24 +0100
+Build-Date: Wed, 12 Dec 2018 08:25:39 +0100
 Installed-Build-Depends:
  autoconf (= 2.69-11),
  automake (= 1:1.16.1-4),

@@ -10,20 +10,73 @@ test -x debian/rules
 rm -f debian/stamp-makefile-build debian/stamp-makefile-install
 /usr/bin/make -C . -k distclean
 make[1]: Entering directory '/dev/shm/all/numactl/numactl'
-make[1]: *** No rule to make target 'distclean'.
+ rm -f numactl numastat numademo migratepages migspeed memhog
+ rm -f test/distance test/ftok test/mbind_mig_pages test/migrate_pages test/move_pages test/mynode test/node-parse test/nodemap test/pagesize test/prefered test/randmap test/realloc_test test/tbitmap test/tshared
+test -z "numa.pc" || rm -f numa.pc
+test -z "libnuma.la" || rm -f libnuma.la
+rm -f ./so_locations
+rm -rf .libs _libs
+rm -rf test/.libs test/_libs
+rm -f *.o
+rm -f test/*.o
+test -z "test/bind_range.log test/checkaffinity.log test/checktopology.log test/distance.log test/nodemap.log test/numademo.log test/regress.log test/tbitmap.log" || rm -f test/bind_range.log test/checkaffinity.log test/checktopology.log test/distance.log test/nodemap.log test/numademo.log test/regress.log test/tbitmap.log
+test -z "test/bind_range.trs test/checkaffinity.trs test/checktopology.trs test/distance.trs test/nodemap.trs test/numademo.trs test/regress.trs test/tbitmap.trs" || rm -f test/bind_range.trs test/checkaffinity.trs test/checktopology.trs test/distance.trs test/nodemap.trs test/numademo.trs test/regress.trs test/tbitmap.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+test . = "." || test -z "" || rm -f 
+rm -f test/.deps/.dirstamp
+rm -f test/.dirstamp
+rm -f config.h stamp-h1
+rm -f libtool config.lt
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f ./.deps/affinity.Plo
+rm -f ./.deps/distance.Plo
+rm -f ./.deps/libnuma.Plo
+rm -f ./.deps/memhog.Po
+rm -f ./.deps/migratepages.Po
+rm -f ./.deps/migspeed.Po
+rm -f ./.deps/numactl.Po
+rm -f ./.deps/numademo-clearcache.Po
+rm -f ./.deps/numademo-mt.Po
+rm -f ./.deps/numademo-numademo.Po
+rm -f ./.deps/numademo-stream_lib.Po
+rm -f ./.deps/numastat-numastat.Po
+rm -f ./.deps/rtnetlink.Plo
+rm -f ./.deps/shm.Po
+rm -f ./.deps/syscall.Plo
+rm -f ./.deps/sysfs.Plo
+rm -f ./.deps/util.Po
+rm -f test/.deps/distance.Po
+rm -f test/.deps/ftok.Po
+rm -f test/.deps/mbind_mig_pages.Po
+rm -f test/.deps/migrate_pages.Po
+rm -f test/.deps/move_pages.Po
+rm -f test/.deps/mynode.Po
+rm -f test/.deps/node-parse.Po
+rm -f test/.deps/nodemap.Po
+rm -f test/.deps/pagesize.Po
+rm -f test/.deps/prefered.Po
+rm -f test/.deps/randmap.Po
+rm -f test/.deps/realloc_test.Po
+rm -f test/.deps/tbitmap.Po
+rm -f test/.deps/tshared.Po
+rm -f Makefile
 make[1]: Leaving directory '/dev/shm/all/numactl/numactl'
-make: [/usr/share/cdbs/1/class/makefile.mk:91: makefile-clean] Error 2 (ignored)
 rm -f debian/stamp-autotools
 rmdir --ignore-fail-on-non-empty .
 rmdir: failed to remove '.': Invalid argument
 make: [/usr/share/cdbs/1/class/autotools.mk:64: makefile-clean] Error 1 (ignored)
-set -e;    
+set -e;   mv ./build-aux/config.guess.cdbs-orig ./build-aux/config.guess;   mv ./build-aux/config.sub.cdbs-orig ./build-aux/config.sub;
 if test -e debian/autoreconf.before; then \
 	dh_autoreconf_clean ; \
 fi
 rm -f debian/stamp-autotools-files
 dh_clean 
-FAKEROOTKEY=867396171 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+FAKEROOTKEY=283580864 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
  debian/rules build
 test -x debian/rules
 mkdir -p "."
@@ -39,8 +92,10 @@ libtoolize: copying file 'm4/ltsugar.m4'
 libtoolize: copying file 'm4/ltversion.m4'
 libtoolize: copying file 'm4/lt~obsolete.m4'
 configure.ac:13: installing 'build-aux/compile'
+configure.ac:9: installing 'build-aux/install-sh'
 configure.ac:9: installing 'build-aux/missing'
 Makefile.am: installing 'build-aux/depcomp'
+parallel-tests: installing 'build-aux/test-driver'
 touch debian/stamp-autotools-files
 chmod a+x /dev/shm/all/numactl/numactl/./configure
 mkdir -p .
@@ -371,7 +426,7 @@ dpkg-shlibdeps: warning: can't extract name and version from library name 'libio
 dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
 dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
 dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
-dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/numactl/usr/bin/memhog debian/numactl/usr/bin/numastat debian/numactl/usr/bin/migratepages debian/numactl/usr/bin/migspeed debian/numactl/usr/bin/numactl were not linked against libdl.so.2 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/numactl/usr/bin/migratepages debian/numactl/usr/bin/memhog debian/numactl/usr/bin/numactl debian/numactl/usr/bin/migspeed debian/numactl/usr/bin/numastat were not linked against libdl.so.2 (they use none of the library's symbols)
 dh_installdeb -plibnuma1 
 dh_perl -plibnuma1 
 dh_shlibdeps -plibnuma1 
@@ -394,7 +449,7 @@ dh_gencontrol -plibnuma-dev
 dh_md5sums -plibnuma-dev 
 dh_builddeb -plibnuma-dev 
 dpkg-deb: building package 'libnuma-dev' in '../libnuma-dev_2.0.12-2_amd64.deb'.
-FAKEROOTKEY=1959196131 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+FAKEROOTKEY=1428832036 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
  dpkg-genbuildinfo --build=binary
  dpkg-genchanges --build=binary >../numactl_2.0.12-2_amd64.changes
 dpkg-genchanges: info: binary-only upload (no source code included)
