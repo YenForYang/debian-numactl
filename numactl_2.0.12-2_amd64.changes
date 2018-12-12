@@ -1,0 +1,41 @@
+Format: 1.8
+Date: Mon, 01 Oct 2018 09:35:16 +0200
+Source: numactl
+Binary: numactl libnuma1 libnuma-dev
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 2.0.12-2
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Ian Wienand <ianw@debian.org>
+Changed-By: Ondřej Nový <onovy@debian.org>
+Description:
+ libnuma-dev - Development files for libnuma
+ libnuma1   - Libraries for controlling NUMA policy
+ numactl    - NUMA scheduling and memory placement tool
+Changes:
+ numactl (2.0.12-2) UNRELEASED; urgency=medium
+ .
+   * d/control: Removing redundant Priority field in binary package
+   * d/changelog: Remove trailing whitespaces
+Checksums-Sha1:
+ 594d32224c01a21b02d3f748ae12548a16543844 169200 libnuma-dev_2.0.12-2_amd64.deb
+ 8515ad4d4faca76cceb5bfac942206b4dac3e308 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ d71b909568bef64886d184f3590b179f1dd23b92 46204 libnuma1_2.0.12-2_amd64.deb
+ 9c7d01cf35beb393544a3652ed63d64372cca955 48120 numactl-dbgsym_2.0.12-2_amd64.deb
+ ba75358631ba6694f531ac0a3cc494e214d0b45c 6053 numactl_2.0.12-2_amd64.buildinfo
+ 64fe08f515fed0f4e93d101205ad0b50b1fca7c1 62132 numactl_2.0.12-2_amd64.deb
+Checksums-Sha256:
+ 1a4387f9f50b052427ae755b0b9be15b0f7fb3d4664a759bb83a11a8ece9d380 169200 libnuma-dev_2.0.12-2_amd64.deb
+ d247c4542f06cffa67f4f582f51ab8f5019fb59f3c613c92adde595637de19ec 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ e25a4890b5794f1a1b6beed1ccb065eccdad0d9598501e07251f1d931d9b8bfe 46204 libnuma1_2.0.12-2_amd64.deb
+ 54674d8887b2e1f044aca575648293809d61d2ad50d1d046662b307076f69e76 48120 numactl-dbgsym_2.0.12-2_amd64.deb
+ a82a833b7c23686ffaa92fd20a8d65afc255c2f42deeb5eb1eb400c335b86193 6053 numactl_2.0.12-2_amd64.buildinfo
+ 00309059954146b45aacee3fa9fee38dc5766a388374e82b9019f2c588d8f01f 62132 numactl_2.0.12-2_amd64.deb
+Files:
+ 32d1b00bef8cbb47502473d738f9fad2 169200 libdevel optional libnuma-dev_2.0.12-2_amd64.deb
+ 68143faa226a30eac472e28a41d77c8a 26936 debug optional libnuma1-dbgsym_2.0.12-2_amd64.deb
+ 88c69586f5e35130e92cabf2d2cb80cd 46204 libs optional libnuma1_2.0.12-2_amd64.deb
+ b9be1fabb2ecf952dff3257441685ff7 48120 debug optional numactl-dbgsym_2.0.12-2_amd64.deb
+ 62f82af7868355d3de85cdac782907c2 6053 admin optional numactl_2.0.12-2_amd64.buildinfo
+ f11b3e040aee52dad2bad2a29c04413b 62132 admin optional numactl_2.0.12-2_amd64.deb

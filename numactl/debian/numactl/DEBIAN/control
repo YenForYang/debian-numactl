@@ -1,0 +1,14 @@
+Package: numactl
+Version: 2.0.12-2
+Architecture: amd64
+Maintainer: Ian Wienand <ianw@debian.org>
+Installed-Size: 287
+Depends: libc6 (>= 2.14), libnuma1 (>= 2.0.11)
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://github.com/numactl/numactl
+Description: NUMA scheduling and memory placement tool
+ numactl runs processes with a specific NUMA (Non-Uniform Memory
+ Architecture) scheduling or memory placement policy.  In addition it
+ can set persistent policy for shared memory segments or files.

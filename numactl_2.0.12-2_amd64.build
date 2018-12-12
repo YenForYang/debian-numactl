@@ -1,0 +1,414 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package numactl
+dpkg-buildpackage: info: source version 2.0.12-2
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Ondřej Nový <onovy@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+test -x debian/rules
+rm -f debian/stamp-makefile-build debian/stamp-makefile-install
+/usr/bin/make -C . -k distclean
+make[1]: Entering directory '/dev/shm/all/numactl/numactl'
+make[1]: *** No rule to make target 'distclean'.
+make[1]: Leaving directory '/dev/shm/all/numactl/numactl'
+make: [/usr/share/cdbs/1/class/makefile.mk:91: makefile-clean] Error 2 (ignored)
+rm -f debian/stamp-autotools
+rmdir --ignore-fail-on-non-empty .
+rmdir: failed to remove '.': Invalid argument
+make: [/usr/share/cdbs/1/class/autotools.mk:64: makefile-clean] Error 1 (ignored)
+set -e;    
+if test -e debian/autoreconf.before; then \
+	dh_autoreconf_clean ; \
+fi
+rm -f debian/stamp-autotools-files
+dh_clean 
+FAKEROOTKEY=867396171 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+test -x debian/rules
+mkdir -p "."
+set -e;   mv ./build-aux/config.guess ./build-aux/config.guess.cdbs-orig; cp --remove-destination /usr/share/misc/config.guess ./build-aux/config.guess;
+set -e;   mv ./build-aux/config.sub ./build-aux/config.sub.cdbs-orig; cp --remove-destination /usr/share/misc/config.sub ./build-aux/config.sub;
+dh_autoreconf 
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:13: installing 'build-aux/compile'
+configure.ac:9: installing 'build-aux/missing'
+Makefile.am: installing 'build-aux/depcomp'
+touch debian/stamp-autotools-files
+chmod a+x /dev/shm/all/numactl/numactl/./configure
+mkdir -p .
+cd . && CC="icc" CXX="icpc" CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe" CXXFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe" CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2" LDFLAGS="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax" /dev/shm/all/numactl/numactl/./configure --build=x86_64-linux-gnu --prefix=/usr --includedir="\${prefix}/include" --mandir="\${prefix}/share/man" --infodir="\${prefix}/share/info" --sysconfdir=/etc --localstatedir=/var --libexecdir="\${prefix}/lib/numactl" --srcdir=. --disable-maintainer-mode --disable-dependency-tracking --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+configure: loading site script /usr/share/config.site
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... (cached) /bin/grep -E
+checking for fgrep... (cached) /bin/grep -F
+checking for ld used by icc... (cached) xild -m elf_x86_64
+checking if the linker (xild -m elf_x86_64) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) /usr/bin/x86_64-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-linux-gnu-nm -B) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for xild -m elf_x86_64 option to reload object files... (cached) -r
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... (cached) dlltool
+checking how to associate runtime and link libraries... (cached) printf %s\n
+checking for archiver @FILE support... (cached) @
+checking for strip... (cached) x86_64-linux-gnu-strip
+checking for ranlib... (cached) /usr/bin/x86_64-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-linux-gnu-nm -B output from icc object... ok
+checking for sysroot... no
+checking for a working dd... (cached) /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... (cached) mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... icc -E
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if icc supports -fno-rtti -fno-exceptions... (cached) yes
+checking for icc option to produce PIC... (cached) -fpic
+checking if icc PIC flag -fpic works... (cached) yes
+checking if icc static flag -static works... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking whether the icc linker (xild -m elf_x86_64 -m elf_x86_64) supports shared libraries... xild: warning #10013: no objects specified for multi-file optimization
+xild: executing 'ld'
+yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... (cached) none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking for thread local storage (TLS) class... __thread
+checking whether C compiler accepts -ftree-vectorize... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+touch debian/stamp-autotools
+/usr/bin/make -C . 
+make[1]: Entering directory '/dev/shm/all/numactl/numactl'
+/usr/bin/make  all-am
+make[2]: Entering directory '/dev/shm/all/numactl/numactl'
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o numactl.o numactl.c
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o util.o util.c
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o shm.o shm.c
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o libnuma.lo libnuma.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c libnuma.c  -fpic -o .libs/libnuma.o
+IPO: WARNING: File scope asm disables -ipo
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c libnuma.c -o libnuma.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o syscall.lo syscall.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c syscall.c  -fpic -o .libs/syscall.o
+IPO: WARNING: File scope asm disables -ipo
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c syscall.c -o syscall.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o distance.lo distance.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c distance.c  -fpic -o .libs/distance.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c distance.c -o distance.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o affinity.lo affinity.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c affinity.c  -fpic -o .libs/affinity.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c affinity.c -o affinity.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o sysfs.lo sysfs.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c sysfs.c  -fpic -o .libs/sysfs.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c sysfs.c -o sysfs.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o rtnetlink.lo rtnetlink.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c rtnetlink.c  -fpic -o .libs/rtnetlink.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -c rtnetlink.c -o rtnetlink.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -version-info 1:0:0 -Wl,--version-script,./versions.ldscript -Wl,-init,numa_init -Wl,-fini,numa_fini -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o libnuma.la -rpath /usr/lib/x86_64-linux-gnu libnuma.lo syscall.lo distance.lo affinity.lo sysfs.lo rtnetlink.lo  
+libtool: link: icc -shared  -fpic  .libs/libnuma.o .libs/syscall.o .libs/distance.o .libs/affinity.o .libs/sysfs.o .libs/rtnetlink.o    -g -O2 -fstack-protector-strong -march=native -Wl,--version-script -Wl,./versions.ldscript -Wl,-init -Wl,numa_init -Wl,-fini -Wl,numa_fini -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax   -Wl,-soname -Wl,libnuma.so.1 -o .libs/libnuma.so.1.0.0
+ipo: warning #11003: no IR in object file .libs/libnuma.o; was the source file compiled with -ipo
+ipo: warning #11003: no IR in object file .libs/syscall.o; was the source file compiled with -ipo
+libtool: link: (cd ".libs" && rm -f "libnuma.so.1" && ln -s "libnuma.so.1.0.0" "libnuma.so.1")
+libtool: link: (cd ".libs" && rm -f "libnuma.so" && ln -s "libnuma.so.1.0.0" "libnuma.so")
+libtool: link: xiar cru .libs/libnuma.a  libnuma.o syscall.o distance.o affinity.o sysfs.o rtnetlink.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: /usr/bin/x86_64-linux-gnu-ranlib .libs/libnuma.a
+libtool: link: ( cd ".libs" && rm -f "libnuma.la" && ln -s "../libnuma.la" "libnuma.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o numactl numactl.o util.o shm.o libnuma.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/numactl numactl.o util.o shm.o  ./.libs/libnuma.so
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -std=gnu99  -c -o numastat-numastat.o `test -f 'numastat.c' || echo './'`numastat.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -std=gnu99   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o numastat numastat-numastat.o  
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -std=gnu99 -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o numastat numastat-numastat.o 
+icc -DHAVE_CONFIG_H -I.  -Wall -DHAVE_STREAM_LIB -DHAVE_MT -DHAVE_CLEAR_CACHE -Wdate-time -D_FORTIFY_SOURCE=2 -O3 -ffast-math -funroll-loops -ftree-vectorize  -c -o numademo-numademo.o `test -f 'numademo.c' || echo './'`numademo.c
+icc: warning #10193: -vec is default; use -x and -ax to configure vectorization
+icc -DHAVE_CONFIG_H -I.  -Wall -DHAVE_STREAM_LIB -DHAVE_MT -DHAVE_CLEAR_CACHE -Wdate-time -D_FORTIFY_SOURCE=2 -O3 -ffast-math -funroll-loops -ftree-vectorize  -c -o numademo-stream_lib.o `test -f 'stream_lib.c' || echo './'`stream_lib.c
+icc: warning #10193: -vec is default; use -x and -ax to configure vectorization
+icc -DHAVE_CONFIG_H -I.  -Wall -DHAVE_STREAM_LIB -DHAVE_MT -DHAVE_CLEAR_CACHE -Wdate-time -D_FORTIFY_SOURCE=2 -O3 -ffast-math -funroll-loops -ftree-vectorize  -c -o numademo-mt.o `test -f 'mt.c' || echo './'`mt.c
+icc: warning #10193: -vec is default; use -x and -ax to configure vectorization
+icc -DHAVE_CONFIG_H -I.  -Wall -DHAVE_STREAM_LIB -DHAVE_MT -DHAVE_CLEAR_CACHE -Wdate-time -D_FORTIFY_SOURCE=2 -O3 -ffast-math -funroll-loops -ftree-vectorize  -c -o numademo-clearcache.o `test -f 'clearcache.c' || echo './'`clearcache.c
+icc: warning #10193: -vec is default; use -x and -ax to configure vectorization
+/bin/bash ./libtool  --tag=CC   --mode=link icc -O3 -ffast-math -funroll-loops -ftree-vectorize   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o numademo numademo-numademo.o numademo-stream_lib.o numademo-mt.o numademo-clearcache.o libnuma.la -lm 
+libtool: link: icc -O3 -ffast-math -funroll-loops -ftree-vectorize -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/numademo numademo-numademo.o numademo-stream_lib.o numademo-mt.o numademo-clearcache.o  ./.libs/libnuma.so -lm
+icc: warning #10193: -vec is default; use -x and -ax to configure vectorization
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o migratepages.o migratepages.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o migratepages migratepages.o util.o libnuma.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/migratepages migratepages.o util.o  ./.libs/libnuma.so
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o migspeed.o migspeed.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o migspeed migspeed.o util.o libnuma.la -lrt 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/migspeed migspeed.o util.o  ./.libs/libnuma.so -lrt
+icc -DHAVE_CONFIG_H -I.  -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe  -c -o memhog.o memhog.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe   -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o memhog memhog.o util.o libnuma.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/memhog memhog.o util.o  ./.libs/libnuma.so
+/bin/sed -e 's,@VERSION\@,2.0.12,g' -e 's,@prefix\@,/usr,g' -e 's,@exec_prefix\@,/usr,g' -e 's,@libdir\@,/usr/lib/x86_64-linux-gnu,g' -e 's,@includedir\@,/usr/include,g' < numa.pc.in > numa.pc || rm numa.pc
+make[2]: Leaving directory '/dev/shm/all/numactl/numactl'
+make[1]: Leaving directory '/dev/shm/all/numactl/numactl'
+touch debian/stamp-makefile-build
+ fakeroot debian/rules binary
+test -x debian/rules
+dh_testroot
+dh_prep 
+dh_installdirs -A 
+mkdir -p "."
+set -e;   
+set -e;   
+/usr/bin/make -C . install DESTDIR=/dev/shm/all/numactl/numactl/debian/tmp/
+make[1]: Entering directory '/dev/shm/all/numactl/numactl'
+make[2]: Entering directory '/dev/shm/all/numactl/numactl'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu'
+ /bin/bash ./libtool   --mode=install /usr/bin/install   libnuma.la '/dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/libnuma.so.1.0.0 /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0
+libtool: install: (cd /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu && { ln -s -f libnuma.so.1.0.0 libnuma.so.1 || { rm -f libnuma.so.1 && ln -s libnuma.so.1.0.0 libnuma.so.1; }; })
+libtool: install: (cd /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu && { ln -s -f libnuma.so.1.0.0 libnuma.so || { rm -f libnuma.so && ln -s libnuma.so.1.0.0 libnuma.so; }; })
+libtool: install: /usr/bin/install .libs/libnuma.lai /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/libnuma.la
+libtool: install: /usr/bin/install .libs/libnuma.a /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/libnuma.a
+libtool: install: chmod 644 /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/libnuma.a
+libtool: install: /usr/bin/x86_64-linux-gnu-ranlib /dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/libnuma.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install numactl numastat numademo migratepages migspeed memhog '/dev/shm/all/numactl/numactl/debian/tmp//usr/bin'
+libtool: warning: 'libnuma.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/numactl /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/numactl
+libtool: install: /usr/bin/install numastat /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/numastat
+libtool: warning: 'libnuma.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/numademo /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/numademo
+libtool: warning: 'libnuma.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/migratepages /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/migratepages
+libtool: warning: 'libnuma.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/migspeed /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/migspeed
+libtool: warning: 'libnuma.la' has not been installed in '/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/memhog /dev/shm/all/numactl/numactl/debian/tmp//usr/bin/memhog
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/include'
+ /usr/bin/install -m 644 numa.h numacompat1.h numaif.h '/dev/shm/all/numactl/numactl/debian/tmp//usr/include'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man2'
+ /usr/bin/install -m 644 move_pages.2 '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man2'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man3'
+ /usr/bin/install -m 644 numa.3 '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man3'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man8'
+ /usr/bin/install -m 644 numactl.8 numastat.8 migratepages.8 migspeed.8 '/dev/shm/all/numactl/numactl/debian/tmp//usr/share/man/man8'
+ /bin/mkdir -p '/dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/pkgconfig'
+ /usr/bin/install -m 644 numa.pc '/dev/shm/all/numactl/numactl/debian/tmp//usr/lib/x86_64-linux-gnu/pkgconfig'
+make[2]: Leaving directory '/dev/shm/all/numactl/numactl'
+make[1]: Leaving directory '/dev/shm/all/numactl/numactl'
+touch debian/stamp-makefile-install
+Adding cdbs dependencies to debian/numactl.substvars
+dh_installdirs -pnumactl \
+	
+Adding cdbs dependencies to debian/libnuma1.substvars
+dh_installdirs -plibnuma1 \
+	
+Adding cdbs dependencies to debian/libnuma-dev.substvars
+dh_installdirs -plibnuma-dev \
+	
+dh_installdocs -pnumactl 
+dh_installexamples -pnumactl 
+dh_installman -pnumactl 
+dh_installinfo -pnumactl 
+dh_installmenu -pnumactl 
+dh_installcron -pnumactl 
+dh_systemd_enable -pnumactl 
+dh_installinit -pnumactl 
+dh_installdebconf -pnumactl 
+dh_installemacsen -pnumactl 
+dh_installcatalogs -pnumactl 
+dh_installpam -pnumactl 
+dh_installlogrotate -pnumactl 
+dh_installlogcheck -pnumactl 
+dh_installchangelogs -pnumactl 
+dh_installudev -pnumactl 
+dh_lintian -pnumactl 
+dh_bugfiles -pnumactl 
+dh_install -pnumactl 
+dh_systemd_start -pnumactl 
+dh_link -pnumactl 
+dh_buildinfo -pnumactl 
+dh_installmime -pnumactl 
+dh_installgsettings -pnumactl 
+dh_installdocs -plibnuma1 
+dh_installexamples -plibnuma1 
+dh_installman -plibnuma1 
+dh_installinfo -plibnuma1 
+dh_installmenu -plibnuma1 
+dh_installcron -plibnuma1 
+dh_systemd_enable -plibnuma1 
+dh_installinit -plibnuma1 
+dh_installdebconf -plibnuma1 
+dh_installemacsen -plibnuma1 
+dh_installcatalogs -plibnuma1 
+dh_installpam -plibnuma1 
+dh_installlogrotate -plibnuma1 
+dh_installlogcheck -plibnuma1 
+dh_installchangelogs -plibnuma1 
+dh_installudev -plibnuma1 
+dh_lintian -plibnuma1 
+dh_bugfiles -plibnuma1 
+dh_install -plibnuma1 
+dh_systemd_start -plibnuma1 
+dh_link -plibnuma1 
+dh_buildinfo -plibnuma1 
+dh_installmime -plibnuma1 
+dh_installgsettings -plibnuma1 
+dh_installdocs -plibnuma-dev 
+dh_installexamples -plibnuma-dev 
+dh_installman -plibnuma-dev 
+dh_installinfo -plibnuma-dev 
+dh_installmenu -plibnuma-dev 
+dh_installcron -plibnuma-dev 
+dh_systemd_enable -plibnuma-dev 
+dh_installinit -plibnuma-dev 
+dh_installdebconf -plibnuma-dev 
+dh_installemacsen -plibnuma-dev 
+dh_installcatalogs -plibnuma-dev 
+dh_installpam -plibnuma-dev 
+dh_installlogrotate -plibnuma-dev 
+dh_installlogcheck -plibnuma-dev 
+dh_installchangelogs -plibnuma-dev 
+dh_installudev -plibnuma-dev 
+dh_lintian -plibnuma-dev 
+dh_bugfiles -plibnuma-dev 
+dh_install -plibnuma-dev 
+dh_systemd_start -plibnuma-dev 
+dh_link -plibnuma-dev 
+dh_buildinfo -plibnuma-dev 
+dh_installmime -plibnuma-dev 
+dh_installgsettings -plibnuma-dev 
+dh_strip -pnumactl  --dbgsym-migration='libnuma-dbg (<< 2.0.11-2.1~)'
+dh_strip_nondeterminism -pnumactl 
+dh_compress -pnumactl 
+dh_fixperms -pnumactl 
+dh_makeshlibs -pnumactl  
+dh_strip -plibnuma1  --dbgsym-migration='libnuma-dbg (<< 2.0.11-2.1~)'
+dh_strip_nondeterminism -plibnuma1 
+dh_compress -plibnuma1 
+dh_fixperms -plibnuma1 
+dh_makeshlibs -plibnuma1  
+dh_strip -plibnuma-dev  --dbgsym-migration='libnuma-dbg (<< 2.0.11-2.1~)'
+dh_strip_nondeterminism -plibnuma-dev 
+dh_compress -plibnuma-dev 
+dh_fixperms -plibnuma-dev 
+dh_makeshlibs -plibnuma-dev  
+dh_installdeb -pnumactl 
+dh_perl -pnumactl 
+dh_shlibdeps -pnumactl 
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/numactl/usr/bin/memhog debian/numactl/usr/bin/numastat debian/numactl/usr/bin/migratepages debian/numactl/usr/bin/migspeed debian/numactl/usr/bin/numactl were not linked against libdl.so.2 (they use none of the library's symbols)
+dh_installdeb -plibnuma1 
+dh_perl -plibnuma1 
+dh_shlibdeps -plibnuma1 
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libnuma1/usr/lib/x86_64-linux-gnu/libnuma.so.1.0.0 was not linked against libdl.so.2 (it uses none of the library's symbols)
+dh_installdeb -plibnuma-dev 
+dh_perl -plibnuma-dev 
+dh_shlibdeps -plibnuma-dev 
+dh_gencontrol -pnumactl  
+dh_md5sums -pnumactl 
+dh_builddeb -pnumactl 
+dpkg-deb: building package 'numactl' in '../numactl_2.0.12-2_amd64.deb'.
+dpkg-deb: building package 'numactl-dbgsym' in '../numactl-dbgsym_2.0.12-2_amd64.deb'.
+dh_gencontrol -plibnuma1  
+dh_md5sums -plibnuma1 
+dh_builddeb -plibnuma1 
+dpkg-deb: building package 'libnuma1' in '../libnuma1_2.0.12-2_amd64.deb'.
+dpkg-deb: building package 'libnuma1-dbgsym' in '../libnuma1-dbgsym_2.0.12-2_amd64.deb'.
+dh_gencontrol -plibnuma-dev  
+dh_md5sums -plibnuma-dev 
+dh_builddeb -plibnuma-dev 
+dpkg-deb: building package 'libnuma-dev' in '../libnuma-dev_2.0.12-2_amd64.deb'.
+FAKEROOTKEY=1959196131 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../numactl_2.0.12-2_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian numactl_2.0.12-2_amd64.changes ...
+W: numactl: hardening-no-pie usr/bin/memhog
+W: numactl: hardening-no-pie usr/bin/migratepages
+W: numactl: hardening-no-pie usr/bin/migspeed
+W: numactl: hardening-no-pie usr/bin/numactl
+W: numactl: hardening-no-pie usr/bin/numastat
+W: numactl: binary-without-manpage usr/bin/memhog
+W: numactl: binary-without-manpage usr/bin/migratepages
+W: numactl: binary-without-manpage usr/bin/migspeed
+W: numactl: binary-without-manpage usr/bin/numactl
+W: numactl: binary-without-manpage usr/bin/numastat
+Finished running lintian.

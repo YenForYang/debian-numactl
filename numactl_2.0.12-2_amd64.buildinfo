@@ -1,0 +1,189 @@
+Format: 1.0
+Source: numactl
+Binary: numactl libnuma1 libnuma-dev
+Architecture: amd64
+Version: 2.0.12-2
+Checksums-Md5:
+ 32d1b00bef8cbb47502473d738f9fad2 169200 libnuma-dev_2.0.12-2_amd64.deb
+ 68143faa226a30eac472e28a41d77c8a 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ 88c69586f5e35130e92cabf2d2cb80cd 46204 libnuma1_2.0.12-2_amd64.deb
+ b9be1fabb2ecf952dff3257441685ff7 48120 numactl-dbgsym_2.0.12-2_amd64.deb
+ f11b3e040aee52dad2bad2a29c04413b 62132 numactl_2.0.12-2_amd64.deb
+Checksums-Sha1:
+ 594d32224c01a21b02d3f748ae12548a16543844 169200 libnuma-dev_2.0.12-2_amd64.deb
+ 8515ad4d4faca76cceb5bfac942206b4dac3e308 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ d71b909568bef64886d184f3590b179f1dd23b92 46204 libnuma1_2.0.12-2_amd64.deb
+ 9c7d01cf35beb393544a3652ed63d64372cca955 48120 numactl-dbgsym_2.0.12-2_amd64.deb
+ 64fe08f515fed0f4e93d101205ad0b50b1fca7c1 62132 numactl_2.0.12-2_amd64.deb
+Checksums-Sha256:
+ 1a4387f9f50b052427ae755b0b9be15b0f7fb3d4664a759bb83a11a8ece9d380 169200 libnuma-dev_2.0.12-2_amd64.deb
+ d247c4542f06cffa67f4f582f51ab8f5019fb59f3c613c92adde595637de19ec 26936 libnuma1-dbgsym_2.0.12-2_amd64.deb
+ e25a4890b5794f1a1b6beed1ccb065eccdad0d9598501e07251f1d931d9b8bfe 46204 libnuma1_2.0.12-2_amd64.deb
+ 54674d8887b2e1f044aca575648293809d61d2ad50d1d046662b307076f69e76 48120 numactl-dbgsym_2.0.12-2_amd64.deb
+ 00309059954146b45aacee3fa9fee38dc5766a388374e82b9019f2c588d8f01f 62132 numactl_2.0.12-2_amd64.deb
+Build-Origin: Debian
+Build-Architecture: amd64
+Build-Date: Wed, 12 Dec 2018 08:08:24 +0100
+Installed-Build-Depends:
+ autoconf (= 2.69-11),
+ automake (= 1:1.16.1-4),
+ autopoint (= 0.19.8.1-2),
+ autotools-dev (= 20180224.1),
+ base-files (= 10.1),
+ base-passwd (= 3.5.45),
+ bash (= 4.4.18-3.1),
+ binutils (= 2.31.1-10),
+ binutils-common (= 2.31.1-10),
+ binutils-x86-64-linux-gnu (= 2.31.1-10),
+ bsdmainutils (= 11.1.2+b1),
+ bsdutils (= 1:2.32.1-0.1),
+ build-essential (= 12.5),
+ bzip2 (= 1.0.6-9),
+ cdbs (= 0.4.158),
+ coreutils (= 8.30-1),
+ cpp (= 4:8.2.0-2),
+ cpp-7 (= 7.3.0-30),
+ cpp-8 (= 8.2.0-9),
+ dash (= 0.5.10.2-2),
+ debconf (= 1.5.69),
+ debhelper (= 11.5.4),
+ debianutils (= 4.8.6),
+ dh-autoreconf (= 19),
+ dh-buildinfo (= 0.11+nmu2),
+ dh-strip-nondeterminism (= 0.45.0-1),
+ diffutils (= 1:3.6-1),
+ dpkg (= 1.19.2),
+ dpkg-dev (= 1.19.2),
+ dwz (= 0.12-2),
+ fdisk (= 2.32.1-0.1),
+ file (= 1:5.35-1),
+ findutils (= 4.6.0+git+20181018-1),
+ g++ (= 4:8.2.0-2),
+ g++-8 (= 8.2.0-9),
+ gawk (= 1:4.2.1+dfsg-1),
+ gcc (= 4:8.2.0-2),
+ gcc-7 (= 7.3.0-30),
+ gcc-7-base (= 7.3.0-30),
+ gcc-8 (= 8.2.0-9),
+ gcc-8-base (= 8.2.0-9),
+ gettext (= 0.19.8.1-2),
+ gettext-base (= 0.19.8.1-2),
+ grep (= 3.1-2),
+ groff-base (= 1.22.3-10),
+ gzip (= 1.9-2.1),
+ hostname (= 3.21),
+ init-system-helpers (= 1.56),
+ install-info (= 6.5.0.dfsg.1-4),
+ intel-comp-ps-ss-bec-19.0.1-144 (= 19.0.1-144),
+ intltool-debian (= 0.35.0+20060710.4),
+ libacl1 (= 2.2.52-3+b1),
+ libarchive-zip-perl (= 1.64-1),
+ libasan4 (= 7.3.0-30),
+ libasan5 (= 8.2.0-9),
+ libatomic1 (= 8.2.0-9),
+ libattr1 (= 1:2.4.47-2+b2),
+ libaudit-common (= 1:2.8.4-2),
+ libaudit1 (= 1:2.8.4-2),
+ libbinutils (= 2.31.1-10),
+ libblkid1 (= 2.32.1-0.1),
+ libbsd0 (= 0.9.1-1),
+ libbz2-1.0 (= 1.0.6-9),
+ libc-bin (= 2.27-8),
+ libc-dev-bin (= 2.27-8),
+ libc6 (= 2.27-8),
+ libc6-dev (= 2.27-8),
+ libcap-ng0 (= 0.7.9-1),
+ libcc1-0 (= 8.2.0-9),
+ libcilkrts5 (= 7.3.0-30),
+ libcroco3 (= 0.6.12-2),
+ libdb5.3 (= 5.3.28+dfsg1-0.2),
+ libdebconfclient0 (= 0.245),
+ libdpkg-perl (= 1.19.2),
+ libelf1 (= 0.170-0.5),
+ libfdisk1 (= 2.32.1-0.1),
+ libffi6 (= 3.2.1-9),
+ libfile-stripnondeterminism-perl (= 0.45.0-1),
+ libgcc-7-dev (= 7.3.0-30),
+ libgcc-8-dev (= 8.2.0-9),
+ libgcc1 (= 1:8.2.0-9),
+ libgcrypt20 (= 1.8.4-3),
+ libgdbm-compat4 (= 1.18.1-2),
+ libgdbm6 (= 1.18.1-2),
+ libglib2.0-0 (= 2.58.1-2),
+ libgmp10 (= 2:6.1.2+dfsg-3),
+ libgomp1 (= 8.2.0-9),
+ libgpg-error0 (= 1.32-3),
+ libicu63 (= 63.1-4),
+ libisl19 (= 0.20-2),
+ libitm1 (= 8.2.0-9),
+ liblsan0 (= 8.2.0-9),
+ liblz4-1 (= 1.8.2-1),
+ liblzma5 (= 5.2.4-1),
+ libmagic-mgc (= 1:5.35-1),
+ libmagic1 (= 1:5.35-1),
+ libmount1 (= 2.32.1-0.1),
+ libmpc3 (= 1.1.0-1),
+ libmpfr6 (= 4.0.1-1),
+ libmpx2 (= 8.2.0-9),
+ libncursesw6 (= 6.1+20181013-1),
+ libpam-modules (= 1.1.8-3.8),
+ libpam-modules-bin (= 1.1.8-3.8),
+ libpam-runtime (= 1.1.8-3.8),
+ libpam0g (= 1.1.8-3.8),
+ libpcre3 (= 2:8.39-11),
+ libperl5.28 (= 5.28.1-1),
+ libpipeline1 (= 1.5.0-2),
+ libquadmath0 (= 8.2.0-9),
+ libreadline7 (= 7.0-5),
+ libseccomp2 (= 2.3.3-3),
+ libselinux1 (= 2.8-1+b1),
+ libsigsegv2 (= 2.12-2),
+ libsmartcols1 (= 2.32.1-0.1),
+ libstdc++-8-dev (= 8.2.0-9),
+ libstdc++6 (= 8.2.0-9),
+ libsystemd0 (= 239-13),
+ libtinfo5 (= 6.1+20181013-1),
+ libtinfo6 (= 6.1+20181013-1),
+ libtool (= 2.4.6-6),
+ libtsan0 (= 8.2.0-9),
+ libubsan0 (= 7.3.0-30),
+ libubsan1 (= 8.2.0-9),
+ libudev1 (= 239-13),
+ libunistring0 (= 0.9.6+really0.9.3-0.1),
+ libuuid1 (= 2.32.1-0.1),
+ libxml2 (= 2.9.8-1),
+ linux-libc-dev (= 4.18.20-2),
+ login (= 1:4.5-1.1),
+ m4 (= 1.4.18-2),
+ make (= 4.2.1-1.2),
+ man-db (= 2.8.4-3),
+ mawk (= 1.3.3-17),
+ ncurses-base (= 6.1+20181013-1),
+ ncurses-bin (= 6.1+20181013-1),
+ patch (= 2.7.6-3),
+ perl (= 5.28.1-1),
+ perl-base (= 5.28.1-1),
+ perl-modules-5.28 (= 5.28.1-1),
+ po-debconf (= 1.0.21),
+ readline-common (= 7.0-5),
+ sed (= 4.5-2),
+ sensible-utils (= 0.0.12),
+ sysvinit-utils (= 2.92~beta-2),
+ tar (= 1.30+dfsg-3),
+ util-linux (= 2.32.1-0.1),
+ xz-utils (= 5.2.4-1),
+ zlib1g (= 1:1.2.11.dfsg-1)
+Environment:
+ AR="xiar"
+ CC="icc"
+ CXX="icpc"
+ DEB_BUILD_OPTIONS="nocheck nodoc parallel=8"
+ DEB_BUILD_PROFILES="nobiarch nocheck nodoc"
+ DEB_CFLAGS_SET="-g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe"
+ DEB_CXXFLAGS_SET="-g -O2 -fdebug-prefix-map=/dev/shm/all/numactl/numactl=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe"
+ DEB_LDFLAGS_SET="-Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax"
+ LANG="en_US.UTF-8"
+ LC_CTYPE="en_US.UTF-8"
+ LD="xild"
+ LD_LIBRARY_PATH="/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7"
+ SOURCE_DATE_EPOCH="1538379316"
